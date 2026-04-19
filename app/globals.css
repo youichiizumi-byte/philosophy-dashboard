@@ -1,0 +1,48 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #e0e7ff;
+    color: #3730a3;
+  }
+}
+
+@layer components {
+  /* ラジオボタンのカスタムスタイル */
+  input[type="radio"]:checked + div {
+    border-color: #6366f1;
+    background-color: #eef2ff;
+  }
+
+  /* テキストエリアのスクロールバー */
+  textarea::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  textarea::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
